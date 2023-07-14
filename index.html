@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaHabit: Personalized Habit Tracker App</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/NovaHabit.png" />
+</head>
+
+<body>
+    <header>
+        <img src="assets/images/logo/NovaHabit_Logo.png" alt class="logo">
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="slogan">
+        <div class="textSlogan">
+            <h1 class="textBig">
+                Elevate Your habit,
+                <br>
+                With Mindful Habit Tracking Online
+            </h1>
+            <div class="textSmall">
+                Use the power of our personalized habit tracker app to check your habit routine and achieve your goals.
+            </div>
+        </div>
+        <div class="sloganButton">
+            <button class="btnLogin-popup-down">Try NovaHabit Now</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="habit.html">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required> <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required> <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn">Login </button>
+                <div class="login-register"><p>Don't have an account? <a href="#" class="register-link">Register</a></p></div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="habit.html">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></ion-icon></span>
+                    <input type="text" required> <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required> <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required> <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register"><p>Already have an account? <a href="#" class="login-link">Login</a></p></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

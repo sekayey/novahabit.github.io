@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker - NovaHabit</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/habit.css"> 
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/NovaHabit.png" />
+</head>
+
+<!-- Nav Bar--> 
+<body>
+    <header>
+        <img src="assets/images/logo/NovaHabit_Logo.png" alt class="logo">
+        <div class="navigation1">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="navigation2">
+                <p>Jeon Jungkook</p>
+                <img src="assets/images/user/profil.jpg" alt class="user">
+            </div>
+        </div>
+    </header>
+
+<!--Fitur Utama--> 
+    <div class="container">
+        <div class="left">
+            <!-- <h1>Habit Tracker</h1> ini tabel-tabel hari kepala nya--> 
+            <h2>Weekly Habit Tracker</h2>
+            <table id="habitTable">
+                <thead>
+                    <tr>
+                    <th class="inputRowHabit">Habits</th>
+                    <th class="inputRowTime">Time</th>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Progress</th>
+                    </tr>
+                </thead>
+                <!-- in HTML ini kolom checklist-->
+                <tbody>
+                    <tr>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td><button onclick="toggleDay(0, 0)">-</button></td>
+                    <td><button onclick="toggleDay(0, 1)">-</button></td>
+                    <td><button onclick="toggleDay(0, 2)">-</button></td>
+                    <td><button onclick="toggleDay(0, 3)">-</button></td>
+                    <td><button onclick="toggleDay(0, 4)">-</button></td>
+                    <td><button onclick="toggleDay(0, 5)">-</button></td>
+                    <td><button onclick="toggleDay(0, 6)">-</button></td>
+                    <td>0%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button id="addRowBtn">Add New Habbit</button>
+            <br><br>
+            <h2>My Habit Notes</h2> <!-- fitur catatan-->
+            <table id="noteTable">
+                <thead>
+                    <tr>
+                    <th class="autoRowHabit">Habits</th>
+                    <th class="autoRowTime">Time</th>
+                    <th class="inputRowNote">Notes</th>
+                    </tr>
+                </thead>
+                <!-- Add rows directly in HTML -->
+                <tbody>
+                    <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- current streak -->
+        <div class="right">
+            <h2>Overall Progress</h2>   <!-- fitur overall -->
+            <div class="tableOverall">
+                <table id="streakTable">
+                    <thead>
+                        <tr>
+                            <th>Current Streak</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="streakValue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="tableOverall">
+                <table id="completeTable">
+                    <thead>
+                        <tr>
+                            <th>Complete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="completedValue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="tableOverall">
+                <table id="failedTable">
+                    <thead>
+                        <tr>
+                            <th>Failed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="failedValue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="tableOverall">
+                <table id="avgProgress">
+                    <thead>
+                        <tr>
+                            <th>Average Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="avgProgressValue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/habit.js"></script>
+</body>
+</html>
