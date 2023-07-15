@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background: rgb(224, 237, 247);
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background: linear-gradient(90deg, #146C94 0%, #23286B 99.17%);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 200px;
+  user-select: none;
+  color: white;
+}
+
+.navigation1 {
+  display: flex;
+  align-items: center;
+}
+
+.navigation1 a {
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation1 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+/* ini yg garis2 gerak di nav bar */
+.navigation1 a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+.navigation2 {
+  /* font-weight: 600; */
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  /* background-color: rgba(111, 157, 235, 1); */
+  padding: 0px 0px 0px 20px;
+  border-radius: 29px;
+  border: 2px solid white;
+  color: white;
+}
+
+.navigation2 p {
+  margin-right: 20px;
+}
+
+.meetTeam {
+  margin-top: 12vh;
+  font-size: 45px;
+}
+
+.user {
+  width: 50px;
+  user-select: none;
+  color: white;
+  border-radius: 100%;
+  border: 2px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.left {
+  flex-grow: 0;
+}
+
+/* .right {
+  
+} */
+
+/* fitur kanan */
+.tableOverall {
+  margin-bottom: 40px;
+  border-spacing: 0;
+  border-radius: 10px;
+  border-collapse: separate;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.tableOverall th {
+  background-color: rgba(0, 63, 136, 1);
+  color: white;
+}
+
+/* Habit table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+/* td {
+  max-width: 1000px;
+} */
+
+/* th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+} */
+
+th {
+  background-color: rgba(111, 157, 235, 1);
+}
+
+/* td:first-child,
+th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+} */
+
+/* tabel perhari*/
+#habitTable {
+  border-spacing: 0;
+  border-radius: 10px 10px 10px 0;
+  border-collapse: separate;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+#habitTable th, td {
+  padding: 8px;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.inputRowHabit {
+  background-color: rgba(255, 213, 0, 1);
+  width: 300px;
+}
+
+.inputRowTime {
+  background-color: rgba(255, 213, 0, 1);
+  width: 90px;
+}
+
+.autoRowHabit {
+  background-color: rgba(111, 157, 235, 1);
+  width: 300px;
+}
+
+.autoRowTime {
+  background-color: rgba(111, 157, 235, 1);
+  width: 90px;
+}
+
+.inputRowNote {
+  background-color: rgba(255, 213, 0, 1);
+  width: 380px;
+}
+
+/* Button styles strip-strip dikotak hari*/
+button {
+  padding: 6px 10px;
+  /* font-size: 14px; */
+  background-color: rgba(0, 63, 136, 1);
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+/* kotak2 ijo*/
+button:hover {
+  background-color: rgb(2, 245, 115);
+  transition: 1s;
+}
+
+/* tombol add new habits*/
+#addRowBtn {
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(0, 63, 136, 1);
+  color: white;
+}
+
+/* Habit row styles-warna dari tabel2 */
+tr.habit-row {
+  background-color: white;
+}
+
+tr.habit-row.completed {
+  background-color: #e6c8c8;
+}
+
+/* Checklist button styles - koak border ceklist*/
+.checklist-button {
+  background-color: white;
+  border-style: solid;
+  border-color: rgb(30, 124, 168);
+  border-radius: 5px;
+}
+
+/* .checklist-button.checked {
+  
+} */
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    margin-right: 0;
+  }
+
+  th, td {
+    white-space: nowrap;
+    min-width: 100px;
+    max-width: 200px;
+  }
+
+  td:first-child,
+  th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #f5f5f5;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  #streakTable,
+  #completeTable,
+  #failedTable,
+  #avgProgress,
+  #noteTable {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+#noteTable {
+  border-spacing: 0;
+  border-radius: 10px;
+  border-collapse: separate;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+#noteTable th, td {
+  padding: 8px;
+  text-align: center;
+  /* border: 1px solid black; */
+  /* border-top-color: 1px solid black;
+  border-right-color: 1px solid black;
+  border-bottom-color: 1px solid black;
+  border-left-color: 1px solid black; */
+}
+
+#noteTable td {
+  padding: 8px;
+  text-align: center;
+  background: white;
+  /* border: 1px solid black; */
+  /* border-top-color: 1px solid black;
+  border-right-color: 1px solid black;
+  border-bottom-color: 1px solid black;
+  border-left-color: 1px solid black; */
+}

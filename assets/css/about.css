@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body { 
+    background: rgb(224, 237, 247);
+}
+/* posisi nya */
+.full-wrap{
+    width: 100%;
+    height: 2610px;
+    /* 2500px */
+}
+.full-wrap .navbar{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 2.87%;
+    border-radius: 0 0 15px 15px;
+}
+/* navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 89.5%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 56px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: linear-gradient(90deg, #146C94 0%, #23286B 99.17%);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 11.5%;
+    user-select: none;
+    color: white;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(241, 239, 239);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.full-wrap .item{
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 97.13%;
+    margin-top: 10px;
+    /* 2425px */
+}
+.meetTeam {
+    margin-top: 30px;
+    font-size: 45px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+    padding-bottom: 8em;
+  }
+  
+  .about-container img {
+    margin-top:  100px;
+  }
+  
+  .about-container > div {
+    margin-right: 100px;
+  }
+  
+  .about-container h1 {
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .about-container p {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .fragabout {
+    margin: 12 100px;
+  }
+  
+  .fragabout img{
+    width: 30%;
+    margin-left: 14em;
+  }    
+  
+h1 {
+    padding: 20px 100px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* garis bawah title */
+hr {
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+h3 {
+    color: rgb(255, 240, 255);
+}
+.flex-container{
+    /* background-color: blue; */
+    width: 51%;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 50px; */
+}
+.flex-row{
+    /* background-color: bisque; */
+    width: 100%;
+    height: 335px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-col{
+    /* background-color: blueviolet; */
+    width: 50%;
+    height: 335px;
+}
+.flex-col2{
+    /* background-color: blueviolet; */
+    width: 31%;
+    height: 335px;
+}
+/* lingkaran anggota*/
+.Team_member{
+    /* background-color: brown; */
+    width: 100%;
+    height: 335px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 5px; */
+    /* margin-bottom: 50px; */
+    /* width: 300px; */
+    /* padding:20px; */
+    /* line-height: 20px; */
+    color: #fcfcfc;
+    position:relative;
+    border-radius: 20px;
+}
+
+/* tole pic*/
+.Team_member h2{
+    color: black;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* nama anggota*/
+.Team_member h3.role{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 12px 0;
+    font-weight: 400;
+}
+
+/* foto anggota*/
+.Team_img{
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 150px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.linkedin_img {
+    margin-top: 10px;
+    height: 22.3%;
+}
+
+/* tablet */
+@media only screen and (max-width: 768px){
+
+    .full-wrap{
+    width: 100%;
+    height: 1305px;
+    /* 2500px */
+}
+    .full-wrap .navbar{
+        /* background-color: aqua; */
+        width: 100%;
+        height: 2%;
+        border-radius: 0 0 15px 15px;
+    }
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: linear-gradient(90deg, #146C94 0%, #23286B 99.17%);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    }
+    .logo {
+        width: 23%;
+        user-select: none;
+        color: white;
+    }
+    .full-wrap .item{
+        /* background-color: aquamarine; */
+        width: 100%;
+        height: 97.13%;
+        margin-top: 10px;
+        /* 2425px */
+    }
+    .flex-container{
+        /* background-color: blue; */
+        width: 51%;
+        height: 1212.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-top: 50px; */
+    }
+    .flex-row{
+        /* background-color: bisque; */
+        width: 100%;
+        height: 170px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .meetTeam {
+        margin-top: 15px;
+        font-size: 22.5px;
+    }
+    h1 {
+        padding: 10px 50px;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 22.5px;
+    }
+    .Team_member h2{
+        color: black;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .Team_member h3.role{
+        color: black;
+        font-size: 9px;
+        text-transform: uppercase;
+        margin: 12px 0;
+        font-weight: 200;
+    }
+    
+    .Team_img{
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 75px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    
+    .linkedin_img {
+        margin-top: 5px;
+        height: 11.15%;
+    }
+}
