@@ -94,11 +94,12 @@ body {
   }
   
   .about-container img {
-    margin-top:  50px;
+    width: 50%;
+    margin-top:  100px;
   }
   
   .about-container > div {
-    margin-right: 50px;
+    margin-right: 100px;
   }
   
   .about-container h1 {
